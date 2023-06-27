@@ -116,7 +116,7 @@ header nav a {
 /* The first card is always the largest, while the other cards will align under the main one with smaller sizing. (Only on large screen size) */
 .main-work {
   width: 100%;
-  height: 500px;
+  height: 400px;
 }
 
 .other-work {
@@ -126,8 +126,8 @@ header nav a {
 
 /* Image centering  */
 .img {
-  height: auto;
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 /* Information tag for each card */

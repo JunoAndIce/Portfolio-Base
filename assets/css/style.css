@@ -10,10 +10,6 @@
 --white: #fff;
 --dark-violet: #1c0522;
 --blue: #0087ff;
-
---outer-space: #33393f;
---bright-turquoise: #2aefcb;
---gin: #e0eae4;
 --heliotrope: #e866ec;
 }
 
@@ -34,7 +30,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  flex-wrap: wrap;
+  text-align: center;
   /* Always on top  */
   z-index: 10000;
 }
@@ -46,38 +43,41 @@ header {
   font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 2px;
+  margin-bottom: 50px;
 }
 
 /* span for dream class to change the color and font of dream in h1  */
 .dream{
   font-size: 48px;
-  color: #fcff45;
+  color: #FFc300;
 }
 
 /* Refer to navbar class.  */
 /* Realign list to stack horizontally.*/
-.navbar {
+.list {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  
 }
 
 /* Remove dot for list items */
-.navbar li{
+.list li{
   list-style: none;
   margin-left: 20px;
 }
 
 /* Remove underline, change text color, make selection hover round  */
-.navbar li a {
+.list li a {
   text-decoration: none;
   padding: 6px 15px;
   color: var(--white);
   border-radius: 20px;
   }
 
-.navbar li a:hover,
-.active {
+.list li a:hover,
+.list li .active {
   background: var(--white);
   color: #2b1055;
   }
@@ -195,10 +195,10 @@ background: var(--dark-violet);
 
 .project-column img{
   display: block;
-  max-width: 230px;
-  max-height: 150px;
   width: auto;
   height: auto;
+  max-width: 230px;
+  max-height: 150px;
   margin: 5% 0;
 }
 
@@ -239,6 +239,12 @@ margin-right: 15px;
   flex-grow: 1;
 }
 
+
+
+/* Contacts section  */
+.list
+
+
 @media screen and (min-width: 768px) {
   /* on tablets, set columns to only be 50% of the width and not grow */
 
@@ -252,6 +258,8 @@ margin-right: 15px;
     flex-grow: 1;
   }
 }
+
+
 
 
 /* media query for larger screens */

@@ -169,8 +169,9 @@ background: var(--dark-violet);
 /* TODO: Use mini project css to semi implement card effects for works */
 /* project section */
 /* Using the Mini Project 2 as a reference */
-/* create our main grid with flexbox, use negative margins to offset the padding on the .card-column class */
 
+
+/* Create a grid/ the project row class controls the projects section alignment */
 .project-row {
   display: flex;
   flex-wrap: wrap;
@@ -185,8 +186,7 @@ background: var(--dark-violet);
 
 .project-column {
   margin-top: 15px;
-  flex: 0 0 33.333%;
-  max-width: 33.333%;
+  flex: 1 0 100%;
   padding: 1.5rem;
   /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
@@ -195,9 +195,11 @@ background: var(--dark-violet);
 
 .project-column img{
   display: block;
-  margin: 0 auto;
-  width: 300px;
-  margin-left: 15px;
+  max-width: 230px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  margin: 5% 0;
 }
 
 /* Same as mini project, make a project card that shows information in a column */
@@ -212,6 +214,7 @@ background: var(--dark-violet);
   transition: all 0.5s ease-in-out;
 }
 
+/* Position the card header so that it rests within the upper side of the box */
 .project-card .project-card-header {
   position: relative;
   margin: -1rem 0 1.5rem 0;
@@ -220,6 +223,7 @@ background: var(--dark-violet);
   transition: all 0.5s ease-in-out;
 }
 
+/* giving space for the paragraph */
 .card-body p{
 margin-right: 15px;
 }
@@ -233,4 +237,31 @@ margin-right: 15px;
 /* make each project card similar in height */
 .project-card {
   flex-grow: 1;
+}
+
+@media screen and (min-width: 768px) {
+  /* on tablets, set columns to only be 50% of the width and not grow */
+
+  .project-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* select the last child to grow to full width if it has space to grow */
+  .project-column:last-child {
+    flex-grow: 1;
+  }
+}
+
+
+/* media query for larger screens */
+@media screen and (min-width: 992px) {
+  header {
+    width: 100%;
+  }
+
+  .project-column {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
 }

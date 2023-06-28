@@ -19,7 +19,7 @@ body {
   min-height: 100vh;
 }
 
-/* Full navbar revamp. Cleaned up navbar and made it a more minimalist feel. */
+/* Full navbar revamp. Cleaned up navbar and gave it a more minimalist feel. */
 header {
   position: absolute;
   top: 0;
@@ -31,7 +31,9 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
   text-align: center;
+
   /* Always on top  */
   z-index: 10000;
 }
@@ -39,9 +41,12 @@ header {
 .title {
   color: var(--white);
   font-weight: 700;
+
   text-decoration: none;
-  font-size: 2em;
   text-transform: uppercase;
+  text-align: center;
+
+  font-size: 2em;
   letter-spacing: 2px;
   margin-bottom: 50px;
 }
@@ -137,33 +142,38 @@ header {
 
 /* General formatting for all sections */
 .section {
-position: relative;
+/* position: relative; */
 padding: 100px;
 background: var(--dark-violet);
+margin-left: auto;
+margin-right: auto;
 }
 
 /* General Title for all sections */
 .section-title {
-  font-size: 3.5em;
+  font-size: 3.2em;
+  text-align: center;
   margin-bottom: 10px;
   color: var(--white);
+
 }
 
 .section .text {
   font-size: 1.2em;
   line-height: 1.2;
   color: var(--white);
-
-  margin-left: 0px;
-  /* overflow: auto; */
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
 }
 
 .section img {
-  float: right;
-  margin-left: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 20px;
-  width: 300px;
+  width: 250px;
 }
 
 /* TODO: Use mini project css to semi implement card effects for works */
@@ -239,14 +249,33 @@ margin-right: 15px;
   flex-grow: 1;
 }
 
-
-
 /* Contacts section  */
-.list
+.contacts ul li{
+margin-bottom: 20px;
+}
+
+/* Footer section  */
+footer {
+  padding: 30px;
+  clear: both;
+  text-align: center;
+  /*Background color added */
+  color: var(--white);
+  background-color: #2b1055;
+}
 
 
+/* * MEDIA QUERIES * */
 @media screen and (min-width: 768px) {
   /* on tablets, set columns to only be 50% of the width and not grow */
+
+  .section-title{
+    text-align: center;
+  }
+
+  .section .text {
+    text-align: center;
+  }
 
   .project-column {
     flex: 0 0 50%;
@@ -260,12 +289,20 @@ margin-right: 15px;
 }
 
 
-
-
 /* media query for larger screens */
 @media screen and (min-width: 992px) {
-  header {
-    width: 100%;
+
+  .section-title{
+    text-align: start;
+  }
+
+  .section img {
+    float: right;
+    /* margin-left: 20px; */
+  }
+
+  .section .text {
+    text-align: start;
   }
 
   .project-column {

@@ -15,7 +15,7 @@
 
 
 body {
-  background: linear-gradient(#2b1055, #1c0522);
+  /* background: linear-gradient(#2b1055, #1c0522); */
   min-height: 100vh;
 }
 
@@ -53,7 +53,7 @@ header {
 
 /* span to create a dream class that changes the color and font of dream in h1  */
 .dream{
-  font-size: 48px;
+  /* font-size: 48px; */
   color: #FFc300;
 }
 
@@ -101,6 +101,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(#2b1055, #1c0522);
+
 }
 
 .hero-sec::before {
@@ -109,7 +111,7 @@ header {
   bottom: 0;
   width: 100%;
   height: 100px;
-  background-color: linear-gradient(to top, var(--dark-violet), transparent);
+  /* background-color: linear-gradient(to top, var(--dark-violet), transparent); */
   z-index: 1000;
 }
 
@@ -130,12 +132,50 @@ header {
   z-index: 6;
 }
 
+.hero-txt-cont{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+
 #hero-txt{
-  position: absolute;
+  /* position: absolute; */
   color: var(--white);
   white-space: nowrap;
-  font-size: 7.5vw;
+  font-size: 6.5vw;
   z-index: 5;
+}
+
+fade {
+  position: absolute;
+  bottom: 0px;
+
+  display: block;
+
+  width: 100%;
+  height: 50px;
+
+  background-image: linear-gradient(to bottom, 
+      rgba(255, 255, 255, 0), 
+      rgba(0, 0, 0, 0.9)
+  100%);
+}
+
+fadeUp {
+  position: absolute;
+  top: 0px;
+
+  display: block;
+
+  width: 100%;
+  height: 50px;
+
+  background-image: linear-gradient(to top, 
+      rgba(255, 255, 255, 0), 
+      rgba(0, 0, 0, 0.9)
+  100%);
 }
 
 /* TODO: Resources/Resume section  */
@@ -144,20 +184,24 @@ header {
 /* General formatting for all sections */
 .section {
 position: relative;
-padding: 100px;
+/* padding: 30px; */
 background: var(--dark-violet);
-margin-left: auto;
-margin-right: auto;
 }
 
 /* General Title for all sections */
+.body-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .section-title {
   font-size: 3.2em;
-  text-align: center;
   margin-bottom: 10px;
   color: var(--white);
-
 }
+
+
 
 .section .text {
   font-size: 1.2em;
@@ -169,12 +213,28 @@ margin-right: auto;
   display: block;
 }
 
-.section img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  width: 250px;
+.title-cont {
+  display: flex;
+  /* justify-content: center; */
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.text-cont {
+  padding: 30px;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+}
+
+
+
+.img-Edi {
+  /* display: block; */
+  padding: 20px;
+  width: 550px;
 }
 
 /* TODO: Use mini project css to semi implement card effects for works */
@@ -186,8 +246,8 @@ margin-right: auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+  /* margin-left: -1.5rem;
+  margin-right: -1.5rem; */
 }
 
 .justify-center {
@@ -240,6 +300,7 @@ margin-right: auto;
   padding: 0;
   color: var(--white);
   transition: all 0.5s ease-in-out;
+
 }
 
 /* giving space for the paragraph */
@@ -271,6 +332,15 @@ footer {
   /*Background color added */
   color: var(--white);
   background-color: #2b1055;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: var(--dark-violet);
 }
 
 
